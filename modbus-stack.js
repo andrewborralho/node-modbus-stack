@@ -115,6 +115,7 @@ ModbusRequestStack.prototype.request = function(functionCode) {
     .put(pdu)
     .buffer();
   global.Silveira = buf;
+  console.log(" buf salvo em cache");
   return this.stream.write(buf);
 }
 
