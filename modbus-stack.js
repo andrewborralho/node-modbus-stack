@@ -114,6 +114,7 @@ ModbusRequestStack.prototype.request = function(functionCode) {
     .word8(functionCode)
     .put(pdu)
     .buffer();
+  global.Silveira = buf;
   return this.stream.write(buf);
 }
 
